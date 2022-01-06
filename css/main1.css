@@ -1,0 +1,13 @@
+#slide {width: 1900px; height: 300px; position: relative;}
+.wrap {width: 90%; height: 300px;}
+.container {width: 800px; height: 100% }
+.content {width: 800px; height: 200px; margin: 0 auto; position: relative; border: 1px solid #ff9100;}
+.img-btn {width: 250px; height: 200px; padding: 20px 30px}
+.c-logo {text-align: center;}
+.context h3 {position: absolute; top: 30px; left: 300px; padding:5px;}
+.context p {width: 450px; height: 85px; position: absolute; top: 80px; left: 300px;}
+
+#category {width:1900px; height: 1000px; background:url("../images/main_bg.svg") right no-repeat;}
+.content-box {width: 300px; height: 350px; border:1px solid #ff8701}
+.tag li {float: left; width: 60px; height:25px; border-radius: 15px; background-color: #0091ff; text-align: center; color: #fff; line-height: 25px; margin: 5px;}
+.tag:after {content: ""; display: block; clear: both;}
