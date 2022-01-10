@@ -1,0 +1,37 @@
+*{padding: 0; margin: 0; box-sizing: border-box;}
+li {list-style: none;}
+a {text-decoration: none; color: #333;}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;}
+
+body {width: 1900px;}
+header {width: 90%; height: 250px; margin: 0 auto; position: relative; z-index: 5;}
+h1 {float:left; }
+#gnb {width: 1000px; height:220px; float: left;}
+#gnb .btn {width: 110px; height: 40px; font-weight: bold; margin: 10px 5px; 
+    background: rgb(242,168,121); background:linear-gradient(120deg, rgba(242,168,121,1) 0%, rgba(255,182,164,1) 100%);  border-radius: 5px; border: none; cursor: pointer;}
+#gnb .btn:hover {background: rgb(242,168,121); opacity:0.7;}
+
+
+/*hambuger menu*/
+#menuToggle {display: block; position: fixed; top: 50px; right: 50px; z-index: 1; -webkit-user-select: none; user-select: none;}
+#menuToggle input {display: block; width: 50px; height: 50px; position: absolute;  cursor: pointer; opacity: 0; z-index: 2; -webkit-touch-callout: none;}
+#menuToggle span{display: block; width: 33px; height: 4px; margin-bottom: 5px; position: relative; background: rgb(0, 145, 255); border-radius: 3px; z-index: 1; transform-origin: 4px 0px; transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;}
+#menuToggle span:first-child{transform-origin: 0% 0%;}
+#menuToggle span:nth-last-child(2) {transform-origin: 0% 100%;}
+#menuToggle input:checked ~ span {opacity: 1; transform: rotate(45deg) translate(-2px, -1px); background: #0091ff;}
+#menuToggle input:checked ~ span:nth-last-child(3){opacity: 0; transform: rotate(0deg) scale(0.2, 0.2);}
+#menuToggle input:checked ~ span:nth-last-child(2){transform: rotate(-45deg) translate(0, -1px);}
+
+#menu {position: absolute; width: 500px; height: 200px; margin: -100px 0 0 -50px; margin-top: 30px; background: rgba(0,145,255,0.5);; -webkit-font-smoothing:antialiased; transform-origin: 0% 0%; transform: translate(100%,0); transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);}
+#menu li {padding: 20px 0; margin-left: 30px;}
+#menu a {color:#fff; font-size: 18px;}
+#menu a:hover {border-bottom: 1px solid #fff; padding-bottom: 3px; transition: width 0.5s;}
+#menuToggle input:checked ~ ul{transform: none;}
+
+footer {width: 95%; margin: 0 auto;}
+.waves {width:100%; height: 100px; background: url("../images/wavesOpacity.svg"); transform: rotate(180deg);}
